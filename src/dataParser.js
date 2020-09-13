@@ -1,6 +1,5 @@
 //-? Import parse-json and other modules as neccessary here
 const parseJson = require('parse-json');
-const fs       = require('fs');
 
 class DataParser {
   constructor(data) {
@@ -15,26 +14,22 @@ class DataParser {
 
   php() {
     //++ Add your implementations here if necessary
-    const jsonFile = fs.readFileSync('./src/data.json', 'utf8');
-    return parseJson(jsonFile)['php'];
+    return parseJson(this.data)['php'];
   }
 
   java() {
     //++ Add your implementations here if necessary
-    const jsonFile = fs.readFileSync('./src/data.json', 'utf8');
-    return parseJson(jsonFile)['java'];
+    return parseJson(this.data)['java'];
   }
 
   python() {
     //++ Add your implementations here if necessary
-    const jsonFile = fs.readFileSync('./src/data.json', 'utf8');
-    return parseJson(jsonFile)['python'];
+    return parseJson(this.data)['python'];
   }
 
   golang() {
     //++ Add your implementations here if necessary
-    const jsonFile = fs.readFileSync('./src/data.json', 'utf8');
-    return parseJson(jsonFile)['python'];
+    return parseJson(this.data)['golang'];
   }
 }
 

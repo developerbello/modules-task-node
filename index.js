@@ -4,7 +4,7 @@ const DataParser = require('./src/dataParser'); //-? Also import the DataParser 
 //+ This line loads in the content of data.json as a json string
 //+ You can console.log data to see the content and datatype
 //+ Feel free to ignore this line for now and ask questions later
-const data = fs.readFileSync('src/data.json');
+const data = fs.readFileSync('src/data.json', 'utf8');
 
 //+ Here, we are initializing the parser class with the data
 //+ This is to enable us access methods defined in the class to perform necessary operations
@@ -22,5 +22,12 @@ console.log(result);
 result = parser.golang();
 console.log(result);
 
+//+ I want to get details about golang
+//+ The result should be a JavaScript object containing details of php
 result = parser.php();
+console.log(result);
+
+//+ I want to get details about golang
+//+ The result should be a JavaScript object containing details of java
+result = parser.java();
 console.log(result);
